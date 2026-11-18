@@ -1,796 +1,420 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Shandhiya Chhetri, Computer Science student at NIT Sikkim.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232343C9'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
-<style>:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); } img { max-width: 100%; } [hidden] { display: none !important; }</style>
-<title>Shandhiya Chhetri</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: a classic portfolio. Sticky nav, a big expanded-Archivo name, a quick-facts card, experience cards, a featured project plus three cards with drawn covers, toolkit, about with an education timeline, and a cobalt contact band. */
-:root {
-  --bg: #F2F3EF;
-  --surface: #FAFAF8;
-  --fg: #14171C;
-  --muted: #5A626C;
-  --line: #D9DCD4;
-  --accent: #2343C9;
-  --accent-soft: #DDE3F8;
-  --on-accent: #FFFFFF;
-  --live: #1C8A55;
-  --amber: #D68A12;
-  --band: #2343C9;
-  --band-fg: #FFFFFF;
-  --band-muted: #CBD4FA;
-  --shadow: 0 1px 2px rgba(20, 23, 28, .04), 0 18px 40px -24px rgba(20, 30, 70, .35);
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shandhiya Chhetri</title>
+  <meta name="description" content="Shandhiya Chhetri, Computer Science student at NIT Sikkim. Backends, machine learning and AI evaluation.">
+  <meta name="author" content="Shandhiya Chhetri">
+  <meta name="theme-color" content="#F2F3EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1114" media="(prefers-color-scheme: dark)">
 
-  --cv-soft: #DDE3F8;
-  --cv-paper: #FFFFFF;
-  --cv-ink: #1F2A4D;
-  --cv-rule: #C6CEEE;
-  --cv-neutral: #E3E6DE;
-  --cv-side: #EEF0EA;
-  --cv-rose: #F3E3DE;
-  --heart: #C8442F;
-  --space: #12161F;
-  --space-orbit: #2B3450;
-  --space-dot: #8DA2FF;
-  --space-text: #7E8896;
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shandhiya Chhetri">
+  <meta property="og:description" content="Computer Science student at NIT Sikkim. Backends, machine learning and AI evaluation.">
+  <meta property="og:url" content="https://shan-aru.github.io/">
 
-  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0E1114;
-    --surface: #151A1F;
-    --fg: #E6E9ED;
-    --muted: #98A2AD;
-    --line: #262C33;
-    --accent: #8DA2FF;
-    --accent-soft: #1D2544;
-    --on-accent: #0E1114;
-    --live: #4CC38A;
-    --amber: #EBB04F;
-    --band: #1E2D7A;
-    --band-fg: #FFFFFF;
-    --band-muted: #B8C4F5;
-    --shadow: none;
-    --cv-soft: #1A2140;
-    --cv-paper: #232A38;
-    --cv-ink: #D3DAF5;
-    --cv-rule: #3A466F;
-    --cv-neutral: #1A1F25;
-    --cv-side: #20262E;
-    --cv-rose: #2A1E1D;
-    --heart: #F07A62;
-    --space: #0A0D12;
-    --space-orbit: #263049;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0E1114;
-  --surface: #151A1F;
-  --fg: #E6E9ED;
-  --muted: #98A2AD;
-  --line: #262C33;
-  --accent: #8DA2FF;
-  --accent-soft: #1D2544;
-  --on-accent: #0E1114;
-  --live: #4CC38A;
-  --amber: #EBB04F;
-  --band: #1E2D7A;
-  --band-fg: #FFFFFF;
-  --band-muted: #B8C4F5;
-  --shadow: none;
-  --cv-soft: #1A2140;
-  --cv-paper: #232A38;
-  --cv-ink: #D3DAF5;
-  --cv-rule: #3A466F;
-  --cv-neutral: #1A1F25;
-  --cv-side: #20262E;
-  --cv-rose: #2A1E1D;
-  --heart: #F07A62;
-  --space: #0A0D12;
-  --space-orbit: #263049;
-  color-scheme: dark;
-}
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-body);
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-body::before {
-  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
-  z-index: 30; background: var(--bg);
-}
-::selection { background: var(--accent-soft); }
-a { color: inherit; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
 
-.wrap {
-  width: 100%;
-  max-width: 76rem;
-  margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-@media (min-width: 720px) {
-  .wrap {
-    padding-left: max(40px, env(safe-area-inset-left, 0px));
-    padding-right: max(40px, env(safe-area-inset-right, 0px));
-  }
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; gap: .5rem;
-  font-family: var(--font-body); font-weight: 600; font-size: .9375rem; line-height: 1.2;
-  padding: .8rem 1.3rem; border-radius: 999px; text-decoration: none; cursor: pointer;
-  border: 1.5px solid var(--line); background: var(--surface); color: var(--fg);
-  transition: background-color .15s, border-color .15s, color .15s;
-}
-.btn:hover { border-color: var(--fg); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-.btn.primary:hover { background: color-mix(in srgb, var(--accent) 82%, var(--fg)); border-color: color-mix(in srgb, var(--accent) 82%, var(--fg)); }
-.btn.small { padding: .55rem 1rem; font-size: .875rem; }
-
-/* Nav */
-.nav {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .8rem; }
-.brand {
-  font-family: var(--font-display); font-stretch: 125%; font-weight: 800; font-size: 1.05rem;
-  letter-spacing: -.015em; text-decoration: none; white-space: nowrap;
-}
-.brand span { font-weight: 300; }
-.nav-links { display: none; gap: 2rem; font-size: .9375rem; }
-.nav-links a { text-decoration: none; color: var(--muted); }
-.nav-links a:hover { color: var(--fg); }
-@media (min-width: 780px) { .nav-links { display: flex; } }
-
-/* Hero */
-.hero { padding-block: clamp(3rem, 8vw, 6rem) clamp(3.5rem, 8vw, 6.5rem); }
-.status {
-  display: inline-flex; align-items: center; gap: .6rem;
-  margin: 0 0 1.75rem; padding: .4rem .9rem .4rem .7rem;
-  font-size: .875rem; color: var(--muted);
-  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
-}
-.status .dot {
-  width: .5rem; height: .5rem; border-radius: 50%; background: var(--live);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--live) 22%, transparent);
-}
-.name {
-  font-family: var(--font-display); font-stretch: 125%; font-weight: 800;
-  font-size: clamp(2.6rem, 10.5vw, 7.75rem); line-height: .92; letter-spacing: -.035em;
-  margin: 0;
-}
-.name span { display: block; }
-.name .last { font-weight: 250; }
-.hero-grid { display: grid; gap: 2.5rem; margin-top: clamp(2rem, 4.5vw, 3rem); align-items: end; }
-@media (min-width: 980px) { .hero-grid { grid-template-columns: minmax(0, 1fr) 23rem; gap: 4.5rem; } }
-.hero-copy { min-width: 0; }
-.role {
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 600; font-stretch: 106%;
-  line-height: 1.28; letter-spacing: -.01em; margin: 0 0 1rem; max-width: 34rem; text-wrap: balance;
-}
-.hero-text { color: var(--muted); margin: 0; max-width: 37rem; }
-.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
-
-.snapshot {
-  min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
-  padding: 1.35rem 1.4rem 1.25rem; box-shadow: var(--shadow);
-}
-.snapshot-title {
-  margin: 0 0 .75rem; font-family: var(--font-mono); font-size: .6875rem; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--muted);
-}
-.snapshot dl { margin: 0; }
-.snapshot dl div { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-block: .6rem; border-bottom: 1px solid var(--line); font-size: .9375rem; }
-.snapshot dt { color: var(--muted); white-space: nowrap; }
-.snapshot dd { margin: 0; text-align: right; font-weight: 500; }
-.socials { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; margin-top: 1rem; font-size: .9375rem; }
-.socials a { color: var(--accent); font-weight: 600; text-decoration: none; }
-.socials a:hover { text-decoration: underline; text-underline-offset: .2em; }
-
-/* Section heads */
-.section { padding-block: clamp(3.5rem, 8vw, 6rem); }
-.sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: .75rem 2rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
-.sec-head h2 {
-  font-family: var(--font-display); font-stretch: 125%; font-weight: 800;
-  font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: -.03em; line-height: 1; margin: 0;
-}
-.sec-head p { margin: 0; color: var(--muted); max-width: 27rem; }
-
-h3 { font-family: var(--font-display); font-stretch: 112%; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; margin: 0; text-wrap: balance; }
-.date { font-family: var(--font-mono); font-size: .8125rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-
-.tags { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 1.1rem 0 0; padding: 0; }
-.tags li {
-  font-family: var(--font-mono); font-size: .72rem; line-height: 1.3; padding: .28rem .65rem;
-  border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--muted);
-}
-
-/* Experience */
-.jobs { display: grid; gap: 1rem; }
-.job {
-  display: grid; gap: 1.25rem 3rem; min-width: 0;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
-  padding: clamp(1.35rem, 3vw, 2.1rem);
-}
-@media (min-width: 880px) { .job { grid-template-columns: 16rem minmax(0, 1fr); } }
-.job-org { display: flex; gap: 1rem; align-items: flex-start; min-width: 0; }
-.initials {
-  flex: none; width: 2.9rem; height: 2.9rem; border-radius: 12px; display: grid; place-items: center;
-  background: var(--accent-soft); color: var(--accent);
-  font-family: var(--font-display); font-stretch: 125%; font-weight: 800; font-size: .95rem;
-}
-.job-org h3 { font-size: 1.15rem; }
-.job-org h3 a { text-decoration: none; }
-.job-org h3 a:hover { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: .2em; }
-.job-org .date { display: block; margin-top: .3rem; }
-.job-body { min-width: 0; }
-.job-role { font-weight: 600; font-size: 1.05rem; margin: 0 0 .7rem; }
-.job-body ul { margin: 0; padding-left: 1.15rem; display: grid; gap: .5rem; max-width: 46rem; }
-.job-body li::marker { color: var(--accent); }
-
-/* Projects */
-.cover { position: relative; aspect-ratio: 16 / 10; max-width: 100%; overflow: hidden; }
-.cover svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
-.bg-soft { background: var(--cv-soft); }
-.bg-space { background: var(--space); }
-.bg-neutral { background: var(--cv-neutral); }
-.bg-rose { background: var(--cv-rose); }
-
-.featured {
-  display: grid; min-width: 0; margin-bottom: 1.25rem; overflow: hidden;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
-}
-@media (min-width: 920px) {
-  .featured { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
-  .featured .cover { aspect-ratio: auto; min-height: 100%; }
-}
-.card-body { display: flex; flex-direction: column; min-width: 0; padding: clamp(1.35rem, 3vw, 2rem); }
-.featured .card-body { padding: clamp(1.5rem, 3.5vw, 2.6rem); }
-.cat { display: flex; flex-wrap: wrap; gap: .35rem .9rem; margin: 0 0 .6rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-.cat .kind { color: var(--accent); }
-.card-body h3 { font-stretch: 118%; font-weight: 800; font-size: 1.45rem; margin: 0 0 .65rem; }
-.featured h3 { font-size: clamp(1.65rem, 3vw, 2.2rem); }
-.card-body p { margin: 0; color: var(--muted); }
-.highlights { margin: 1rem 0 0; padding-left: 1.15rem; display: grid; gap: .45rem; }
-.highlights li::marker { color: var(--accent); }
-.card-links { margin-top: auto; padding-top: 1.35rem; display: flex; gap: 1.4rem; }
-.card-links a { color: var(--accent); font-weight: 600; text-decoration: none; }
-.card-links a:hover { text-decoration: underline; text-underline-offset: .2em; }
-
-.cards { display: grid; gap: 1.25rem; }
-.card {
-  display: flex; flex-direction: column; min-width: 0; overflow: hidden;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-@media (min-width: 680px) and (max-width: 1019px) {
-  .card { display: grid; grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); }
-  .card .cover { aspect-ratio: auto; min-height: 100%; }
-}
-@media (min-width: 1020px) { .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-
-/* Cover art */
-.cv-soft { fill: var(--cv-soft); }
-.cv-paper { fill: var(--cv-paper); }
-.cv-ink { fill: var(--cv-ink); }
-.cv-rule { fill: var(--cv-rule); }
-.cv-faint { fill: var(--cv-ink); opacity: .22; }
-.cv-hl { fill: var(--accent); opacity: .14; }
-.cv-accent { fill: var(--accent); }
-.cv-accent2 { fill: var(--accent); opacity: .6; }
-.cv-accent3 { fill: var(--accent); opacity: .32; }
-.cv-onaccent { fill: var(--on-accent); }
-.cv-neutral { fill: var(--cv-neutral); }
-.cv-side { fill: var(--cv-side); }
-.cv-rose { fill: var(--cv-rose); }
-.cv-live { fill: var(--live); }
-.cv-amber { fill: var(--amber); }
-.cv-heart { fill: var(--heart); }
-.cv-link { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 4 4; }
-.cv-line { fill: none; stroke: var(--cv-rule); stroke-width: 1; }
-.cv-ecg { fill: none; stroke: var(--heart); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
-.cv-ecg-grid { fill: none; stroke: var(--cv-rule); stroke-width: .75; opacity: .7; }
-.cv-ring { fill: var(--cv-paper); stroke: var(--heart); stroke-width: 2.5; }
-.cv-text { fill: var(--cv-ink); font-family: var(--font-mono); font-size: 10px; }
-.cv-text-dim { fill: var(--cv-ink); opacity: .6; font-family: var(--font-mono); font-size: 9px; }
-.cv-label { fill: var(--cv-ink); font-family: var(--font-body); font-size: 11px; font-weight: 600; }
-.cv-chiptext { fill: var(--on-accent); font-family: var(--font-mono); font-size: 8px; font-weight: 500; }
-.sp-bg { fill: var(--space); }
-.sp-star { fill: var(--space-text); opacity: .7; }
-.sp-orbit { fill: none; stroke: var(--space-orbit); stroke-width: 1.25; }
-.sp-dot { fill: var(--space-dot); }
-.sp-earth { fill: #4C6BFF; }
-.sp-flag { fill: #EBB04F; }
-.sp-flag-ring { fill: none; stroke: #EBB04F; stroke-width: 1.25; stroke-dasharray: 3 3; }
-.sp-bar { fill: var(--space-dot); opacity: .75; }
-.sp-text { fill: var(--space-text); font-family: var(--font-mono); font-size: 10px; }
-.sp-flag-text { fill: #EBB04F; font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; }
-
-/* Toolkit */
-.toolkit { display: grid; gap: 1rem; }
-@media (min-width: 640px) { .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1060px) { .toolkit { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.tool { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 1.35rem 1.4rem 1.5rem; }
-.tool h3 { display: flex; align-items: center; gap: .65rem; font-size: 1.05rem; }
-.tool-icon {
-  flex: none; width: 2.1rem; height: 2.1rem; border-radius: 10px; display: grid; place-items: center;
-  background: var(--accent-soft); color: var(--accent);
-}
-.tool-icon svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.tool .tags { margin-top: 1rem; }
-.tool .tags li { font-size: .75rem; color: var(--fg); }
-
-/* About */
-.about { display: grid; gap: 2.5rem 5rem; }
-@media (min-width: 920px) { .about { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
-.about-text { min-width: 0; }
-.about-text p { font-size: 1.125rem; line-height: 1.65; margin: 0 0 1.1rem; max-width: 38rem; }
-.about-text p:first-child { font-size: clamp(1.3rem, 2.2vw, 1.55rem); line-height: 1.4; font-weight: 600; font-stretch: 106%; letter-spacing: -.01em; }
-.edu-title { margin: 0 0 1.25rem; font-family: var(--font-mono); font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.edu { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
-.edu li { position: relative; padding: 0 0 1.75rem 1.6rem; }
-.edu li:last-child { padding-bottom: 0; }
-.edu li::before {
-  content: ""; position: absolute; left: -8px; top: .3rem; width: 14px; height: 14px; border-radius: 50%;
-  background: var(--bg); border: 2px solid var(--accent);
-}
-.edu li:first-child::before { background: var(--accent); }
-.edu h3 { font-size: 1.1rem; }
-.edu .date { display: block; margin: .2rem 0 .35rem; }
-.edu p { margin: 0; color: var(--muted); }
-.edu b { color: var(--fg); font-weight: 600; }
-
-/* Contact band */
-.band { background: var(--band); color: var(--band-fg); }
-.band .wrap { padding-block: clamp(3.75rem, 9vw, 6.5rem); }
-.band h2 {
-  font-family: var(--font-display); font-stretch: 125%; font-weight: 800;
-  font-size: clamp(2.4rem, 8vw, 5rem); line-height: .95; letter-spacing: -.035em; margin: 0 0 1.25rem;
-}
-.band h2 span { font-weight: 250; }
-.band p { color: var(--band-muted); max-width: 34rem; margin: 0 0 2rem; font-size: 1.125rem; }
-.mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; }
-.mail {
-  font-family: var(--font-display); font-stretch: 110%; font-weight: 600;
-  font-size: clamp(1.25rem, 3.6vw, 2rem); letter-spacing: -.01em;
-  overflow-wrap: anywhere; user-select: all; min-width: 0;
-}
-.btn.on-band { background: transparent; color: var(--band-fg); border-color: color-mix(in srgb, var(--band-fg) 40%, transparent); }
-.btn.on-band:hover { background: var(--band-fg); color: var(--band); border-color: var(--band-fg); }
-.btn.on-band.solid { background: var(--band-fg); color: var(--band); border-color: var(--band-fg); }
-.btn.on-band.solid:hover { background: transparent; color: var(--band-fg); }
-.band-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
-
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; padding-block: 1.6rem 2.2rem; font-size: .875rem; color: var(--muted); }
-footer a { color: var(--muted); text-decoration: none; }
-footer a:hover { color: var(--fg); }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .card, .btn { transition: none; }
-  .card:hover { transform: none; }
-}
-</style>
+  <!-- Apply a saved theme before the page paints, so it doesn't flash. -->
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.setAttribute('data-theme', savedTheme);
+    } catch (err) {}
+  </script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Shandhiya <span>Chhetri</span></a>
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="#top">Shandhiya <span>Chhetri</span></a>
-    <nav class="nav-links" aria-label="Sections">
-      <a href="#work">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#toolkit">Toolkit</a>
-      <a href="#about">About</a>
-    </nav>
-    <a class="btn primary small" href="#contact">Contact</a>
-  </div>
-</header>
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#work">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#about">About</a>
+        <a class="mobile-only" href="#contact">Contact</a>
+      </nav>
 
-<main>
-  <section class="hero wrap" id="top">
-    <p class="status"><span class="dot" aria-hidden="true"></span>Currently at DataCurve and AfterQuery</p>
-    <h1 class="name"><span>Shandhiya</span><span class="last">Chhetri</span></h1>
-
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="role">Software developer focused on backends, machine learning and AI evaluation.</p>
-        <p class="hero-text">I'm a Computer Science student at NIT Sikkim. I work on open-source patches and the test environments used to benchmark AI coding agents, and I build ML and full-stack projects with my classmates.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">View projects</a>
-          <a class="btn" href="#contact">Get in touch</a>
-        </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        </button>
+        <a class="btn primary small nav-cta" href="#contact">Contact</a>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <svg class="i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
       </div>
-
-      <aside class="snapshot" aria-label="Quick facts">
-        <p class="snapshot-title">At a glance</p>
-        <dl>
-          <div><dt>Based in</dt><dd>West Bengal, India</dd></div>
-          <div><dt>Studying</dt><dd>B.Tech CSE, NIT Sikkim</dd></div>
-          <div><dt>CGPA</dt><dd>8.23</dd></div>
-          <div><dt>Working at</dt><dd>DataCurve, AfterQuery</dd></div>
-          <div><dt>Graduating</dt><dd>2028</dd></div>
-        </dl>
-        <div class="socials">
-          <a href="https://github.com/Shan-Aru" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/shandhiya-chhetri-698725336/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://leetcode.com/u/Shandhiya__Chhetri/" target="_blank" rel="noopener">LeetCode ↗</a>
-        </div>
-      </aside>
     </div>
-  </section>
+  </header>
 
-  <section class="section wrap" id="work">
-    <div class="sec-head">
-      <h2>Experience</h2>
-      <p>Two remote roles I've held since February 2026, alongside my degree.</p>
-    </div>
-    <div class="jobs">
-      <article class="job">
-        <div class="job-org">
-          <span class="initials" aria-hidden="true">DC</span>
-          <div>
-            <h3><a href="https://datacurve.ai/" target="_blank" rel="noopener">DataCurve</a></h3>
-            <span class="date">Feb 2026 – Present · Remote</span>
+  <main>
+    <!-- Hero -->
+    <section class="hero wrap" id="top">
+      <p class="status"><span class="dot" aria-hidden="true"></span>Currently at DataCurve and AfterQuery</p>
+      <h1 class="name"><span>Shandhiya</span><span class="last">Chhetri</span></h1>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="role">Software developer focused on backends, machine learning and AI evaluation.</p>
+          <p class="hero-text">I'm a Computer Science student at NIT Sikkim. I work on open-source patches and the test environments used to benchmark AI coding agents, and I build ML and full-stack projects with my classmates.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn" href="#contact">Get in touch</a>
           </div>
         </div>
-        <div class="job-body">
-          <p class="job-role">Software Developer</p>
-          <ul>
-            <li>Implement features from open issues in open-source codebases written in Python, Go, Rust and JavaScript, including protocol codecs, language runtimes and storage layers.</li>
-            <li>Deliver each feature as a multi-module patch against a production repository I haven't worked in before.</li>
-            <li>Build a network-isolated Docker environment and a regression test suite for every patch. These are used to benchmark LLM coding agents.</li>
-          </ul>
-          <ul class="tags"><li>Python</li><li>Go</li><li>Rust</li><li>JavaScript</li><li>Docker</li></ul>
-        </div>
-      </article>
 
-      <article class="job">
-        <div class="job-org">
-          <span class="initials" aria-hidden="true">AQ</span>
-          <div>
-            <h3><a href="https://www.afterquery.com/" target="_blank" rel="noopener">AfterQuery</a> &amp; Shipd.ai</h3>
-            <span class="date">Feb 2026 – Present · Remote</span>
+        <aside class="snapshot" aria-label="Quick facts">
+          <p class="snapshot-title">At a glance</p>
+          <dl>
+            <div><dt>Based in</dt><dd>West Bengal, India</dd></div>
+            <div><dt>Studying</dt><dd>B.Tech CSE, NIT Sikkim</dd></div>
+            <div><dt>CGPA</dt><dd>8.23</dd></div>
+            <div><dt>Working at</dt><dd>DataCurve, AfterQuery</dd></div>
+            <div><dt>Graduating</dt><dd>2028</dd></div>
+          </dl>
+          <div class="socials">
+            <a href="https://github.com/Shan-Aru" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/shandhiya-chhetri-698725336/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://leetcode.com/u/Shandhiya__Chhetri/" target="_blank" rel="noopener">LeetCode ↗</a>
           </div>
-        </div>
-        <div class="job-body">
-          <p class="job-role">AI Benchmark &amp; Dataset Contributor</p>
-          <ul>
-            <li>Design adversarial benchmark tasks and ML competition challenges around the ways AI coding agents tend to fail.</li>
-            <li>Package each task with a Docker environment, a reference solution, automated pytest grading and GPU benchmarks.</li>
-            <li>Curate permissively licensed open-source datasets and refine scoring rubrics so challenges stay new and fairly graded.</li>
-          </ul>
-          <ul class="tags"><li>Python</li><li>pytest</li><li>Docker</li><li>Evaluation</li></ul>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section wrap" id="projects">
-    <div class="sec-head">
-      <h2>Projects</h2>
-      <p>A few things I've built during my degree.</p>
-    </div>
-
-    <article class="featured">
-      <div class="cover bg-soft">
-        <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of a page of notes linked to a chat answer that cites page 14, with a list of predicted questions">
-          <rect class="cv-soft" width="480" height="300"></rect>
-          <g transform="rotate(-4 126 150)">
-            <rect class="cv-paper" x="44" y="42" width="164" height="216" rx="6"></rect>
-            <rect class="cv-ink" x="62" y="62" width="70" height="8" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="84" width="128" height="5" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="96" width="116" height="5" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="108" width="124" height="5" rx="2"></rect>
-            <rect class="cv-hl" x="57" y="123" width="138" height="31" rx="3"></rect>
-            <rect class="cv-rule" x="62" y="130" width="122" height="5" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="142" width="104" height="5" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="168" width="128" height="5" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="180" width="96" height="5" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="192" width="120" height="5" rx="2"></rect>
-            <rect class="cv-rule" x="62" y="204" width="110" height="5" rx="2"></rect>
-            <text class="cv-text-dim" x="62" y="242">p. 14</text>
-          </g>
-          <rect class="cv-paper" x="236" y="36" width="208" height="228" rx="10"></rect>
-          <rect class="cv-accent" x="318" y="52" width="110" height="26" rx="13"></rect>
-          <rect class="cv-onaccent" x="332" y="62.5" width="72" height="5" rx="2"></rect>
-          <rect class="cv-soft" x="252" y="90" width="172" height="64" rx="10"></rect>
-          <rect class="cv-faint" x="264" y="102" width="144" height="5" rx="2"></rect>
-          <rect class="cv-faint" x="264" y="114" width="130" height="5" rx="2"></rect>
-          <rect class="cv-faint" x="264" y="126" width="84" height="5" rx="2"></rect>
-          <rect class="cv-accent" x="360" y="124" width="52" height="16" rx="8"></rect>
-          <text class="cv-chiptext" x="386" y="135" text-anchor="middle">[1] p.14</text>
-          <text class="cv-label" x="252" y="186">Likely questions</text>
-          <rect class="cv-accent" x="252" y="196" width="152" height="8" rx="4"></rect>
-          <rect class="cv-accent2" x="252" y="214" width="114" height="8" rx="4"></rect>
-          <rect class="cv-accent3" x="252" y="232" width="78" height="8" rx="4"></rect>
-          <path class="cv-link" d="M198 146 C 238 176, 346 178, 386 141"></path>
-        </svg>
+        </aside>
       </div>
-      <div class="card-body">
-        <p class="cat"><span class="kind">Generative AI</span><span>Group project</span></p>
-        <h3>Exam Prep Assistant</h3>
-        <p>Upload your course PDFs and previous years' question papers. It answers questions from your notes with page references, finds the main topics, and predicts which questions are likely to come up.</p>
-        <ul class="highlights">
-          <li>RAG over your notes with LangChain, FAISS and sentence-transformers, with cited sources</li>
-          <li>Topic extraction with TF-IDF and key-phrase scoring, plus an LLM summary</li>
-          <li>Scores each topic on how often, how recently and how heavily it was asked, then writes likely questions</li>
-        </ul>
-        <ul class="tags"><li>Python</li><li>LangChain</li><li>FAISS</li><li>NLTK</li><li>Streamlit</li></ul>
-        <div class="card-links">
-          <a href="https://github.com/Nimdeeki/Gen-AI-Powered-Exam-Preparation-Assistant" target="_blank" rel="noopener">View code ↗</a>
-        </div>
-      </div>
-    </article>
+    </section>
 
-    <div class="cards">
-      <article class="card">
-        <div class="cover bg-space">
-          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of asteroid orbits around Earth with one asteroid flagged as an anomaly, and a small bar chart of risk scores">
-            <rect class="sp-bg" width="480" height="300"></rect>
-            <circle class="sp-star" cx="30" cy="62" r="1"></circle>
-            <circle class="sp-star" cx="84" cy="244" r="1"></circle>
-            <circle class="sp-star" cx="122" cy="40" r="1.2"></circle>
-            <circle class="sp-star" cx="204" cy="272" r="1"></circle>
-            <circle class="sp-star" cx="262" cy="26" r="1"></circle>
-            <circle class="sp-star" cx="334" cy="256" r="1.2"></circle>
-            <circle class="sp-star" cx="392" cy="58" r="1"></circle>
-            <circle class="sp-star" cx="452" cy="36" r="1.2"></circle>
-            <circle class="sp-star" cx="466" cy="150" r="1"></circle>
-            <circle class="sp-star" cx="18" cy="176" r="1"></circle>
-            <g transform="rotate(-14 230 150)">
-              <ellipse class="sp-orbit" cx="230" cy="150" rx="70" ry="30"></ellipse>
-              <ellipse class="sp-orbit" cx="230" cy="150" rx="130" ry="58"></ellipse>
-              <ellipse class="sp-orbit" cx="230" cy="150" rx="195" ry="92"></ellipse>
-              <circle class="sp-dot" cx="164.2" cy="139.7" r="3"></circle>
-              <circle class="sp-dot" cx="283.6" cy="169.3" r="2.5"></circle>
-              <circle class="sp-dot" cx="165" cy="200.2" r="3"></circle>
-              <circle class="sp-dot" cx="342.6" cy="121" r="2.5"></circle>
-              <circle class="sp-dot" cx="185.5" cy="95.5" r="2.5"></circle>
-              <circle class="sp-dot" cx="263.9" cy="59.4" r="3"></circle>
-              <circle class="sp-flag-ring" cx="413.3" cy="181.5" r="13"></circle>
-              <circle class="sp-flag" cx="413.3" cy="181.5" r="5"></circle>
+    <!-- Experience -->
+    <section class="section wrap" id="work">
+      <div class="sec-head" data-reveal>
+        <h2>Experience</h2>
+        <p>Two remote roles I've held since February 2026, alongside my degree.</p>
+      </div>
+
+      <div class="jobs">
+        <article class="job" data-reveal>
+          <div class="job-org">
+            <span class="initials" aria-hidden="true">DC</span>
+            <div>
+              <h3><a href="https://datacurve.ai/" target="_blank" rel="noopener">DataCurve</a></h3>
+              <span class="date">Feb 2026 – Present · Remote</span>
+            </div>
+          </div>
+          <div class="job-body">
+            <p class="job-role">Software Developer</p>
+            <ul>
+              <li>Implement features from open issues in open-source codebases written in Python, Go, Rust and JavaScript, including protocol codecs, language runtimes and storage layers.</li>
+              <li>Deliver each feature as a multi-module patch against a production repository I haven't worked in before.</li>
+              <li>Build a network-isolated Docker environment and a regression test suite for every patch. These are used to benchmark LLM coding agents.</li>
+            </ul>
+            <ul class="tags"><li>Python</li><li>Go</li><li>Rust</li><li>JavaScript</li><li>Docker</li></ul>
+          </div>
+        </article>
+
+        <article class="job" data-reveal>
+          <div class="job-org">
+            <span class="initials" aria-hidden="true">AQ</span>
+            <div>
+              <h3><a href="https://www.afterquery.com/" target="_blank" rel="noopener">AfterQuery</a> &amp; Shipd.ai</h3>
+              <span class="date">Feb 2026 – Present · Remote</span>
+            </div>
+          </div>
+          <div class="job-body">
+            <p class="job-role">AI Benchmark &amp; Dataset Contributor</p>
+            <ul>
+              <li>Design adversarial benchmark tasks and ML competition challenges around the ways AI coding agents tend to fail.</li>
+              <li>Package each task with a Docker environment, a reference solution, automated pytest grading and GPU benchmarks.</li>
+              <li>Curate permissively licensed open-source datasets and refine scoring rubrics so challenges stay new and fairly graded.</li>
+            </ul>
+            <ul class="tags"><li>Python</li><li>pytest</li><li>Docker</li><li>Evaluation</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section wrap" id="projects">
+      <div class="sec-head" data-reveal>
+        <h2>Projects</h2>
+        <p>A few things I've built during my degree.</p>
+      </div>
+
+      <article class="featured" data-reveal>
+        <div class="cover bg-soft">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of a page of notes linked to a chat answer that cites page 14, with a list of predicted questions">
+            <rect class="cv-soft" width="480" height="300"></rect>
+            <g transform="rotate(-4 126 150)">
+              <rect class="cv-paper" x="44" y="42" width="164" height="216" rx="6"></rect>
+              <rect class="cv-ink" x="62" y="62" width="70" height="8" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="84" width="128" height="5" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="96" width="116" height="5" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="108" width="124" height="5" rx="2"></rect>
+              <rect class="cv-hl" x="57" y="123" width="138" height="31" rx="3"></rect>
+              <rect class="cv-rule" x="62" y="130" width="122" height="5" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="142" width="104" height="5" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="168" width="128" height="5" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="180" width="96" height="5" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="192" width="120" height="5" rx="2"></rect>
+              <rect class="cv-rule" x="62" y="204" width="110" height="5" rx="2"></rect>
+              <text class="cv-text-dim" x="62" y="242">p. 14</text>
             </g>
-            <circle class="sp-earth" cx="230" cy="150" r="9"></circle>
-            <text class="sp-flag-text" x="415" y="112" text-anchor="middle">ANOMALY</text>
-            <text class="sp-text" x="22" y="32">NEO risk monitor</text>
-            <rect class="sp-bar" x="384" y="262" width="8" height="12"></rect>
-            <rect class="sp-bar" x="397" y="254" width="8" height="20"></rect>
-            <rect class="sp-bar" x="410" y="265" width="8" height="9"></rect>
-            <rect class="sp-flag" x="423" y="246" width="8" height="28"></rect>
-            <rect class="sp-bar" x="436" y="258" width="8" height="16"></rect>
+            <rect class="cv-paper" x="236" y="36" width="208" height="228" rx="10"></rect>
+            <rect class="cv-accent" x="318" y="52" width="110" height="26" rx="13"></rect>
+            <rect class="cv-onaccent" x="332" y="62.5" width="72" height="5" rx="2"></rect>
+            <rect class="cv-soft" x="252" y="90" width="172" height="64" rx="10"></rect>
+            <rect class="cv-faint" x="264" y="102" width="144" height="5" rx="2"></rect>
+            <rect class="cv-faint" x="264" y="114" width="130" height="5" rx="2"></rect>
+            <rect class="cv-faint" x="264" y="126" width="84" height="5" rx="2"></rect>
+            <rect class="cv-accent" x="360" y="124" width="52" height="16" rx="8"></rect>
+            <text class="cv-chiptext" x="386" y="135" text-anchor="middle">[1] p.14</text>
+            <text class="cv-label" x="252" y="186">Likely questions</text>
+            <rect class="cv-accent" x="252" y="196" width="152" height="8" rx="4"></rect>
+            <rect class="cv-accent2" x="252" y="214" width="114" height="8" rx="4"></rect>
+            <rect class="cv-accent3" x="252" y="232" width="78" height="8" rx="4"></rect>
+            <path class="cv-link" d="M198 146 C 238 176, 346 178, 386 141"></path>
           </svg>
         </div>
         <div class="card-body">
-          <p class="cat"><span class="kind">Data science</span></p>
-          <h3>AsteRisk</h3>
-          <p>A Streamlit dashboard on NASA's Near-Earth Object API. Each asteroid gets a risk score from its speed, distance and size, and KMeans with Isolation Forest flags unusual orbits.</p>
-          <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Plotly</li><li>Streamlit</li></ul>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="cover bg-neutral">
-          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of a dashboard with Student, Faculty and Staff tabs, summary boxes, a bar chart and a status table">
-            <rect class="cv-neutral" width="480" height="300"></rect>
-            <rect class="cv-paper" x="36" y="30" width="408" height="240" rx="10"></rect>
-            <path class="cv-side" d="M46 30 H124 V270 H46 A10 10 0 0 1 36 260 V40 A10 10 0 0 1 46 30 Z"></path>
-            <rect class="cv-ink" x="50" y="48" width="40" height="8" rx="2"></rect>
-            <rect class="cv-rule" x="50" y="80" width="56" height="6" rx="2"></rect>
-            <rect class="cv-hl" x="44" y="94" width="72" height="20" rx="5"></rect>
-            <rect class="cv-accent" x="50" y="101" width="56" height="6" rx="2"></rect>
-            <rect class="cv-rule" x="50" y="122" width="48" height="6" rx="2"></rect>
-            <rect class="cv-rule" x="50" y="142" width="54" height="6" rx="2"></rect>
-            <rect class="cv-rule" x="50" y="162" width="44" height="6" rx="2"></rect>
-            <text class="cv-text" x="144" y="56">Student</text>
-            <text class="cv-text-dim" x="206" y="56">Faculty</text>
-            <text class="cv-text-dim" x="266" y="56">Staff</text>
-            <rect class="cv-accent" x="144" y="62" width="42" height="2"></rect>
-            <rect class="cv-rule" x="136" y="66" width="296" height="1"></rect>
-            <rect class="cv-neutral" x="144" y="80" width="88" height="48" rx="6"></rect>
-            <rect class="cv-neutral" x="240" y="80" width="88" height="48" rx="6"></rect>
-            <rect class="cv-neutral" x="336" y="80" width="88" height="48" rx="6"></rect>
-            <rect class="cv-faint" x="154" y="91" width="40" height="5" rx="2"></rect>
-            <rect class="cv-ink" x="154" y="104" width="30" height="12" rx="2"></rect>
-            <rect class="cv-faint" x="250" y="91" width="44" height="5" rx="2"></rect>
-            <rect class="cv-ink" x="250" y="104" width="24" height="12" rx="2"></rect>
-            <rect class="cv-faint" x="346" y="91" width="36" height="5" rx="2"></rect>
-            <rect class="cv-accent" x="346" y="104" width="34" height="12" rx="2"></rect>
-            <rect class="cv-accent3" x="150" y="210" width="14" height="40" rx="2"></rect>
-            <rect class="cv-accent2" x="174" y="186" width="14" height="64" rx="2"></rect>
-            <rect class="cv-accent3" x="198" y="198" width="14" height="52" rx="2"></rect>
-            <rect class="cv-accent" x="222" y="162" width="14" height="88" rx="2"></rect>
-            <rect class="cv-accent3" x="246" y="190" width="14" height="60" rx="2"></rect>
-            <rect class="cv-accent2" x="270" y="174" width="14" height="76" rx="2"></rect>
-            <circle class="cv-live" cx="324" cy="153" r="3.5"></circle>
-            <rect class="cv-rule" x="334" y="150" width="70" height="6" rx="2"></rect>
-            <circle class="cv-amber" cx="324" cy="177" r="3.5"></circle>
-            <rect class="cv-rule" x="334" y="174" width="62" height="6" rx="2"></rect>
-            <circle class="cv-live" cx="324" cy="201" r="3.5"></circle>
-            <rect class="cv-rule" x="334" y="198" width="74" height="6" rx="2"></rect>
-            <circle class="cv-amber" cx="324" cy="225" r="3.5"></circle>
-            <rect class="cv-rule" x="334" y="222" width="56" height="6" rx="2"></rect>
-            <circle class="cv-live" cx="324" cy="249" r="3.5"></circle>
-            <rect class="cv-rule" x="334" y="246" width="66" height="6" rx="2"></rect>
-          </svg>
-        </div>
-        <div class="card-body">
-          <p class="cat"><span class="kind">Full stack</span><span>Group project</span></p>
-          <h3>Infra Flow</h3>
-          <p>Campus infrastructure management with separate workflows for students, faculty and staff, on a Flask REST API and a normalized 15-table MySQL database with role-based access.</p>
-          <ul class="tags"><li>Flask</li><li>MySQL</li><li>REST APIs</li><li>JavaScript</li></ul>
+          <p class="cat"><span class="kind">Generative AI</span><span>Group project</span></p>
+          <h3>Exam Prep Assistant</h3>
+          <p>Upload your course PDFs and previous years' question papers. It answers questions from your notes with page references, finds the main topics, and predicts which questions are likely to come up.</p>
+          <ul class="highlights">
+            <li>RAG over your notes with LangChain, FAISS and sentence-transformers, with cited sources</li>
+            <li>Topic extraction with TF-IDF and key-phrase scoring, plus an LLM summary</li>
+            <li>Scores each topic on how often, how recently and how heavily it was asked, then writes likely questions</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>LangChain</li><li>FAISS</li><li>NLTK</li><li>Streamlit</li></ul>
           <div class="card-links">
-            <a href="https://github.com/Leah-Sonowal/College-Infrastructure-Management" target="_blank" rel="noopener">View code ↗</a>
+            <a href="https://github.com/Nimdeeki/Gen-AI-Powered-Exam-Preparation-Assistant" target="_blank" rel="noopener">View code ↗</a>
           </div>
         </div>
       </article>
 
-      <article class="card">
-        <div class="cover bg-rose">
-          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of a heartbeat trace on ECG grid paper above a predicted risk meter">
-            <defs>
-              <pattern id="ecg-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path class="cv-ecg-grid" d="M20 0 H0 V20"></path>
-              </pattern>
-            </defs>
-            <rect class="cv-rose" width="480" height="300"></rect>
-            <rect class="cv-paper" x="40" y="44" width="400" height="212" rx="10"></rect>
-            <rect x="56" y="60" width="368" height="140" fill="url(#ecg-grid)"></rect>
-            <polyline class="cv-ecg" points="60,140 110,140 120,132 130,140 150,140 158,148 166,84 176,176 184,140 204,140 220,126 236,140 270,140 280,132 290,140 310,140 318,148 326,84 336,176 344,140 364,140 380,126 396,140 420,140"></polyline>
-            <text class="cv-label" x="60" y="227">Predicted risk</text>
-            <rect class="cv-rule" x="160" y="219" width="260" height="8" rx="4"></rect>
-            <rect class="cv-heart" x="160" y="219" width="168" height="8" rx="4"></rect>
-            <circle class="cv-ring" cx="328" cy="223" r="6"></circle>
-          </svg>
-        </div>
-        <div class="card-body">
-          <p class="cat"><span class="kind">Machine learning</span><span>Group project</span></p>
-          <h3>Heart Disease Prediction</h3>
-          <p>Merges three public datasets (UCI, Framingham and Cardio) into one schema and a SQLite star-schema warehouse, then compares Logistic Regression, Decision Tree and Random Forest. A terminal tool asks a few health questions and rates your risk using a model trained on 80,000+ records.</p>
-          <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Pandas</li><li>SQLite</li></ul>
-          <div class="card-links">
-            <a href="https://github.com/Leah-Sonowal/Heart-Disease-Risk-Prediction" target="_blank" rel="noopener">View code ↗</a>
+      <div class="cards" data-reveal>
+        <article class="card">
+          <div class="cover bg-space">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of asteroid orbits around Earth with one asteroid flagged as an anomaly, and a small bar chart of risk scores">
+              <rect class="sp-bg" width="480" height="300"></rect>
+              <circle class="sp-star" cx="30" cy="62" r="1"></circle>
+              <circle class="sp-star" cx="84" cy="244" r="1"></circle>
+              <circle class="sp-star" cx="122" cy="40" r="1.2"></circle>
+              <circle class="sp-star" cx="204" cy="272" r="1"></circle>
+              <circle class="sp-star" cx="262" cy="26" r="1"></circle>
+              <circle class="sp-star" cx="334" cy="256" r="1.2"></circle>
+              <circle class="sp-star" cx="392" cy="58" r="1"></circle>
+              <circle class="sp-star" cx="452" cy="36" r="1.2"></circle>
+              <circle class="sp-star" cx="466" cy="150" r="1"></circle>
+              <circle class="sp-star" cx="18" cy="176" r="1"></circle>
+              <g transform="rotate(-14 230 150)">
+                <ellipse class="sp-orbit" cx="230" cy="150" rx="70" ry="30"></ellipse>
+                <ellipse class="sp-orbit" cx="230" cy="150" rx="130" ry="58"></ellipse>
+                <ellipse class="sp-orbit" cx="230" cy="150" rx="195" ry="92"></ellipse>
+                <circle class="sp-dot" cx="164.2" cy="139.7" r="3"></circle>
+                <circle class="sp-dot" cx="283.6" cy="169.3" r="2.5"></circle>
+                <circle class="sp-dot" cx="165" cy="200.2" r="3"></circle>
+                <circle class="sp-dot" cx="342.6" cy="121" r="2.5"></circle>
+                <circle class="sp-dot" cx="185.5" cy="95.5" r="2.5"></circle>
+                <circle class="sp-dot" cx="263.9" cy="59.4" r="3"></circle>
+                <circle class="sp-flag-ring" cx="413.3" cy="181.5" r="13"></circle>
+                <circle class="sp-flag" cx="413.3" cy="181.5" r="5"></circle>
+              </g>
+              <circle class="sp-earth" cx="230" cy="150" r="9"></circle>
+              <text class="sp-flag-text" x="415" y="112" text-anchor="middle">ANOMALY</text>
+              <text class="sp-text" x="22" y="32">NEO risk monitor</text>
+              <rect class="sp-bar" x="384" y="262" width="8" height="12"></rect>
+              <rect class="sp-bar" x="397" y="254" width="8" height="20"></rect>
+              <rect class="sp-bar" x="410" y="265" width="8" height="9"></rect>
+              <rect class="sp-flag" x="423" y="246" width="8" height="28"></rect>
+              <rect class="sp-bar" x="436" y="258" width="8" height="16"></rect>
+            </svg>
           </div>
+          <div class="card-body">
+            <p class="cat"><span class="kind">Data science</span></p>
+            <h3>AsteRisk</h3>
+            <p>A Streamlit dashboard on NASA's Near-Earth Object API. Each asteroid gets a risk score from its speed, distance and size, and KMeans with Isolation Forest flags unusual orbits.</p>
+            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Plotly</li><li>Streamlit</li></ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cover bg-neutral">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of a dashboard with Student, Faculty and Staff tabs, summary boxes, a bar chart and a status table">
+              <rect class="cv-neutral" width="480" height="300"></rect>
+              <rect class="cv-paper" x="36" y="30" width="408" height="240" rx="10"></rect>
+              <path class="cv-side" d="M46 30 H124 V270 H46 A10 10 0 0 1 36 260 V40 A10 10 0 0 1 46 30 Z"></path>
+              <rect class="cv-ink" x="50" y="48" width="40" height="8" rx="2"></rect>
+              <rect class="cv-rule" x="50" y="80" width="56" height="6" rx="2"></rect>
+              <rect class="cv-hl" x="44" y="94" width="72" height="20" rx="5"></rect>
+              <rect class="cv-accent" x="50" y="101" width="56" height="6" rx="2"></rect>
+              <rect class="cv-rule" x="50" y="122" width="48" height="6" rx="2"></rect>
+              <rect class="cv-rule" x="50" y="142" width="54" height="6" rx="2"></rect>
+              <rect class="cv-rule" x="50" y="162" width="44" height="6" rx="2"></rect>
+              <text class="cv-text" x="144" y="56">Student</text>
+              <text class="cv-text-dim" x="206" y="56">Faculty</text>
+              <text class="cv-text-dim" x="266" y="56">Staff</text>
+              <rect class="cv-accent" x="144" y="62" width="42" height="2"></rect>
+              <rect class="cv-rule" x="136" y="66" width="296" height="1"></rect>
+              <rect class="cv-neutral" x="144" y="80" width="88" height="48" rx="6"></rect>
+              <rect class="cv-neutral" x="240" y="80" width="88" height="48" rx="6"></rect>
+              <rect class="cv-neutral" x="336" y="80" width="88" height="48" rx="6"></rect>
+              <rect class="cv-faint" x="154" y="91" width="40" height="5" rx="2"></rect>
+              <rect class="cv-ink" x="154" y="104" width="30" height="12" rx="2"></rect>
+              <rect class="cv-faint" x="250" y="91" width="44" height="5" rx="2"></rect>
+              <rect class="cv-ink" x="250" y="104" width="24" height="12" rx="2"></rect>
+              <rect class="cv-faint" x="346" y="91" width="36" height="5" rx="2"></rect>
+              <rect class="cv-accent" x="346" y="104" width="34" height="12" rx="2"></rect>
+              <rect class="cv-accent3" x="150" y="210" width="14" height="40" rx="2"></rect>
+              <rect class="cv-accent2" x="174" y="186" width="14" height="64" rx="2"></rect>
+              <rect class="cv-accent3" x="198" y="198" width="14" height="52" rx="2"></rect>
+              <rect class="cv-accent" x="222" y="162" width="14" height="88" rx="2"></rect>
+              <rect class="cv-accent3" x="246" y="190" width="14" height="60" rx="2"></rect>
+              <rect class="cv-accent2" x="270" y="174" width="14" height="76" rx="2"></rect>
+              <circle class="cv-live" cx="324" cy="153" r="3.5"></circle>
+              <rect class="cv-rule" x="334" y="150" width="70" height="6" rx="2"></rect>
+              <circle class="cv-amber" cx="324" cy="177" r="3.5"></circle>
+              <rect class="cv-rule" x="334" y="174" width="62" height="6" rx="2"></rect>
+              <circle class="cv-live" cx="324" cy="201" r="3.5"></circle>
+              <rect class="cv-rule" x="334" y="198" width="74" height="6" rx="2"></rect>
+              <circle class="cv-amber" cx="324" cy="225" r="3.5"></circle>
+              <rect class="cv-rule" x="334" y="222" width="56" height="6" rx="2"></rect>
+              <circle class="cv-live" cx="324" cy="249" r="3.5"></circle>
+              <rect class="cv-rule" x="334" y="246" width="66" height="6" rx="2"></rect>
+            </svg>
+          </div>
+          <div class="card-body">
+            <p class="cat"><span class="kind">Full stack</span><span>Group project</span></p>
+            <h3>Infra Flow</h3>
+            <p>Campus infrastructure management with separate workflows for students, faculty and staff, on a Flask REST API and a normalized 15-table MySQL database with role-based access.</p>
+            <ul class="tags"><li>Flask</li><li>MySQL</li><li>REST APIs</li><li>JavaScript</li></ul>
+            <div class="card-links">
+              <a href="https://github.com/Leah-Sonowal/College-Infrastructure-Management" target="_blank" rel="noopener">View code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cover bg-rose">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of a heartbeat trace on ECG grid paper above a predicted risk meter">
+              <defs>
+                <pattern id="ecg-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path class="cv-ecg-grid" d="M20 0 H0 V20"></path>
+                </pattern>
+              </defs>
+              <rect class="cv-rose" width="480" height="300"></rect>
+              <rect class="cv-paper" x="40" y="44" width="400" height="212" rx="10"></rect>
+              <rect x="56" y="60" width="368" height="140" fill="url(#ecg-grid)"></rect>
+              <polyline class="cv-ecg" points="60,140 110,140 120,132 130,140 150,140 158,148 166,84 176,176 184,140 204,140 220,126 236,140 270,140 280,132 290,140 310,140 318,148 326,84 336,176 344,140 364,140 380,126 396,140 420,140"></polyline>
+              <text class="cv-label" x="60" y="227">Predicted risk</text>
+              <rect class="cv-rule" x="160" y="219" width="260" height="8" rx="4"></rect>
+              <rect class="cv-heart" x="160" y="219" width="168" height="8" rx="4"></rect>
+              <circle class="cv-ring" cx="328" cy="223" r="6"></circle>
+            </svg>
+          </div>
+          <div class="card-body">
+            <p class="cat"><span class="kind">Machine learning</span><span>Group project</span></p>
+            <h3>Heart Disease Prediction</h3>
+            <p>Merges three public datasets (UCI, Framingham and Cardio) into one schema and a SQLite star-schema warehouse, then compares Logistic Regression, Decision Tree and Random Forest. A terminal tool asks a few health questions and rates your risk using a model trained on 80,000+ records.</p>
+            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Pandas</li><li>SQLite</li></ul>
+            <div class="card-links">
+              <a href="https://github.com/Leah-Sonowal/Heart-Disease-Risk-Prediction" target="_blank" rel="noopener">View code ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Toolkit -->
+    <section class="section wrap" id="toolkit">
+      <div class="sec-head" data-reveal>
+        <h2>Toolkit</h2>
+        <p>The languages, libraries and tools I use most.</p>
+      </div>
+
+      <div class="toolkit" data-reveal>
+        <div class="tool">
+          <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="8 6 2 12 8 18"></polyline><polyline points="16 6 22 12 16 18"></polyline></svg></span>Languages</h3>
+          <ul class="tags"><li>Python</li><li>C++</li><li>C</li><li>JavaScript</li><li>Go</li><li>Rust</li></ul>
         </div>
-      </article>
-    </div>
-  </section>
+        <div class="tool">
+          <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="15 7 21 7 21 13"></polyline></svg></span>ML &amp; data</h3>
+          <ul class="tags"><li>scikit-learn</li><li>Pandas</li><li>NumPy</li><li>NLP</li><li>LangChain</li><li>FAISS</li><li>FLAN-T5</li></ul>
+        </div>
+        <div class="tool">
+          <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"></rect><rect x="3" y="13" width="18" height="7" rx="2"></rect><line x1="7" y1="7.5" x2="7.01" y2="7.5"></line><line x1="7" y1="16.5" x2="7.01" y2="16.5"></line></svg></span>Backend</h3>
+          <ul class="tags"><li>Flask</li><li>Node.js</li><li>Express</li><li>REST APIs</li><li>MySQL</li><li>MongoDB</li></ul>
+        </div>
+        <div class="tool">
+          <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 21 7v10l-9 5-9-5V7z"></path><polyline points="3 7 12 12 21 7"></polyline><line x1="12" y1="12" x2="12" y2="22"></line></svg></span>Tools</h3>
+          <ul class="tags"><li>Docker</li><li>Linux</li><li>Git</li><li>pytest</li><li>Streamlit</li></ul>
+        </div>
+      </div>
+    </section>
 
-  <section class="section wrap" id="toolkit">
-    <div class="sec-head">
-      <h2>Toolkit</h2>
-      <p>The languages, libraries and tools I use most.</p>
-    </div>
-    <div class="toolkit">
-      <div class="tool">
-        <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="8 6 2 12 8 18"></polyline><polyline points="16 6 22 12 16 18"></polyline></svg></span>Languages</h3>
-        <ul class="tags"><li>Python</li><li>C++</li><li>C</li><li>JavaScript</li><li>Go</li><li>Rust</li></ul>
+    <!-- About -->
+    <section class="section wrap" id="about">
+      <div class="sec-head" data-reveal>
+        <h2>About</h2>
       </div>
-      <div class="tool">
-        <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="15 7 21 7 21 13"></polyline></svg></span>ML &amp; data</h3>
-        <ul class="tags"><li>scikit-learn</li><li>Pandas</li><li>NumPy</li><li>NLP</li><li>LangChain</li><li>FAISS</li><li>FLAN-T5</li></ul>
-      </div>
-      <div class="tool">
-        <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"></rect><rect x="3" y="13" width="18" height="7" rx="2"></rect><line x1="7" y1="7.5" x2="7.01" y2="7.5"></line><line x1="7" y1="16.5" x2="7.01" y2="16.5"></line></svg></span>Backend</h3>
-        <ul class="tags"><li>Flask</li><li>Node.js</li><li>Express</li><li>REST APIs</li><li>MySQL</li><li>MongoDB</li></ul>
-      </div>
-      <div class="tool">
-        <h3><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 21 7v10l-9 5-9-5V7z"></path><polyline points="3 7 12 12 21 7"></polyline><line x1="12" y1="12" x2="12" y2="22"></line></svg></span>Tools</h3>
-        <ul class="tags"><li>Docker</li><li>Linux</li><li>Git</li><li>pytest</li><li>Streamlit</li></ul>
-      </div>
-    </div>
-  </section>
 
-  <section class="section wrap" id="about">
-    <div class="sec-head">
-      <h2>About</h2>
-    </div>
-    <div class="about">
-      <div class="about-text">
-        <p>I'm a third-year Computer Science student at NIT Sikkim, originally from West Bengal.</p>
-        <p>Most of what I've learned about real software comes from working in codebases I didn't write. I find where a change belongs, make it, and write the tests that prove it works. I enjoy designing, optimizing and debugging systems, and I keep up my problem solving on LeetCode.</p>
-        <p>Outside of work I build ML and backend projects with classmates, from a RAG study assistant to a full-stack system for running a campus.</p>
+      <div class="about" data-reveal>
+        <div class="about-text">
+          <p>I'm a third-year Computer Science student at NIT Sikkim, originally from West Bengal.</p>
+          <p>Most of what I've learned about real software comes from working in codebases I didn't write. I find where a change belongs, make it, and write the tests that prove it works. I enjoy designing, optimizing and debugging systems, and I keep up my problem solving on LeetCode.</p>
+          <p>Outside of work I build ML and backend projects with classmates, from a RAG study assistant to a full-stack system for running a campus.</p>
+        </div>
+        <div>
+          <p class="edu-title">Education</p>
+          <ol class="edu">
+            <li>
+              <h3>National Institute of Technology Sikkim</h3>
+              <span class="date">Expected 2028</span>
+              <p>B.Tech in Computer Science · <b>CGPA 8.23</b></p>
+            </li>
+            <li>
+              <h3>Class XII</h3>
+              <span class="date">2023</span>
+              <p>Parangerpar Shishu Kalyan High School · <b>87.5%</b></p>
+            </li>
+            <li>
+              <h3>Class X</h3>
+              <span class="date">2021</span>
+              <p>Parangerpar Shishu Kalyan High School · <b>98.71%</b></p>
+            </li>
+          </ol>
+        </div>
       </div>
-      <div>
-        <p class="edu-title">Education</p>
-        <ol class="edu">
-          <li>
-            <h3>National Institute of Technology Sikkim</h3>
-            <span class="date">Expected 2028</span>
-            <p>B.Tech in Computer Science · <b>CGPA 8.23</b></p>
-          </li>
-          <li>
-            <h3>Class XII</h3>
-            <span class="date">2023</span>
-            <p>Parangerpar Shishu Kalyan High School · <b>87.5%</b></p>
-          </li>
-          <li>
-            <h3>Class X</h3>
-            <span class="date">2021</span>
-            <p>Parangerpar Shishu Kalyan High School · <b>98.71%</b></p>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="band" id="contact">
+    <!-- Contact -->
+    <section class="band" id="contact">
+      <div class="wrap">
+        <h2>Get in <span>touch</span></h2>
+        <p>Happy to talk about roles, projects, or anything on this page. Email is the quickest way to reach me.</p>
+        <div class="mail-row">
+          <span class="mail" id="email">shandhiya000@gmail.com</span>
+          <button type="button" class="btn on-band solid small" id="copy-email">Copy email</button>
+        </div>
+        <div class="band-links">
+          <a class="btn on-band" href="https://github.com/Shan-Aru" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn on-band" href="https://www.linkedin.com/in/shandhiya-chhetri-698725336/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn on-band" href="https://leetcode.com/u/Shandhiya__Chhetri/" target="_blank" rel="noopener">LeetCode ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="wrap">
-      <h2>Get in <span>touch</span></h2>
-      <p>Happy to talk about roles, projects, or anything on this page. Email is the quickest way to reach me.</p>
-      <div class="mail-row">
-        <span class="mail" id="email">shandhiya000@gmail.com</span>
-        <button type="button" class="btn on-band solid small" id="copy-email">Copy email</button>
-      </div>
-      <div class="band-links">
-        <a class="btn on-band" href="https://github.com/Shan-Aru" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn on-band" href="https://www.linkedin.com/in/shandhiya-chhetri-698725336/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn on-band" href="https://leetcode.com/u/Shandhiya__Chhetri/" target="_blank" rel="noopener">LeetCode ↗</a>
-      </div>
+      <span>© <span id="year">2026</span> Shandhiya Chhetri</span>
+      <a href="#top">Back to top ↑</a>
     </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <span>© 2026 Shandhiya Chhetri</span>
-    <a href="#top">Back to top ↑</a>
-  </div>
-</footer>
-
-<script>
-(function () {
-  var btn = document.getElementById('copy-email');
-  var email = document.getElementById('email');
-  if (!btn || !email) return;
-  var timer;
-  function show(label) {
-    btn.textContent = label;
-    clearTimeout(timer);
-    timer = setTimeout(function () { btn.textContent = 'Copy email'; }, 1800);
-  }
-  function selectText() {
-    var range = document.createRange();
-    range.selectNodeContents(email);
-    var sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-    show('Selected');
-  }
-  btn.addEventListener('click', function () {
-    var text = email.textContent.trim();
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { show('Copied'); }, selectText);
-    } else {
-      selectText();
-    }
-  });
-})();
-</script>
+  </footer>
 </body>
 </html>
