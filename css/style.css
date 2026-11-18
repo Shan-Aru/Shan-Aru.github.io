@@ -1,40 +1,30 @@
 /* ==========================================================================
    Shandhiya Chhetri — portfolio styles
    Layout: sticky nav, hero with a quick-facts card, experience cards,
-   featured project + three project cards with drawn covers, toolkit,
-   about with an education timeline, and a cobalt contact band.
+   featured project + three project cards with screenshots, toolkit,
+   about with an education timeline, and a dark contact band.
    ========================================================================== */
 
 /* ---------- Design tokens ---------- */
+/* Warm paper, ink and a deep green. One accent, no gradients. */
 :root {
-  --bg: #F2F3EF;
-  --surface: #FAFAF8;
-  --fg: #14171C;
-  --muted: #5A626C;
-  --line: #D9DCD4;
-  --accent: #2343C9;
-  --accent-soft: #DDE3F8;
-  --on-accent: #FFFFFF;
-  --live: #1C8A55;
-  --amber: #D68A12;
-  --band: #2343C9;
-  --band-fg: #FFFFFF;
-  --band-muted: #CBD4FA;
-  --shadow: 0 1px 2px rgba(20, 23, 28, .04), 0 18px 40px -24px rgba(20, 30, 70, .35);
+  --bg: #F3EFE6;
+  --surface: #FBF8F2;
+  --fg: #1F1C17;
+  --muted: #655E53;
+  --line: #DCD5C6;
+  --accent: #2F5B46;
+  --accent-soft: #DCE6DC;
+  --on-accent: #FBF8F2;
+  --live: #4C8A5E;
+  --band: #1F1C17;
+  --band-fg: #F3EFE6;
+  --band-muted: #B9B1A3;
+  --shadow: 0 1px 2px rgba(31, 28, 23, .05), 0 18px 40px -26px rgba(52, 40, 24, .35);
 
-  /* Project cover art */
-  --cv-soft: #DDE3F8;
-  --cv-paper: #FFFFFF;
-  --cv-ink: #1F2A4D;
-  --cv-rule: #C6CEEE;
-  --cv-neutral: #E3E6DE;
-  --cv-side: #EEF0EA;
-  --cv-rose: #F3E3DE;
-  --heart: #C8442F;
-  --space: #12161F;
-  --space-orbit: #2B3450;
-  --space-dot: #8DA2FF;
-  --space-text: #7E8896;
+  /* Project screenshots sit on a tan mat. */
+  --cover-bg: #E6DFD1;
+  --frame-line: rgba(31, 28, 23, .12);
 
   --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -43,59 +33,41 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0E1114;
-    --surface: #151A1F;
-    --fg: #E6E9ED;
-    --muted: #98A2AD;
-    --line: #262C33;
-    --accent: #8DA2FF;
-    --accent-soft: #1D2544;
-    --on-accent: #0E1114;
-    --live: #4CC38A;
-    --amber: #EBB04F;
-    --band: #1E2D7A;
-    --band-fg: #FFFFFF;
-    --band-muted: #B8C4F5;
+    --bg: #14120F;
+    --surface: #1C1915;
+    --fg: #ECE6DA;
+    --muted: #A39B8D;
+    --line: #2F2A23;
+    --accent: #93C2A4;
+    --accent-soft: #233229;
+    --on-accent: #14120F;
+    --live: #7DB892;
+    --band: #221E19;
+    --band-fg: #ECE6DA;
+    --band-muted: #A39B8D;
     --shadow: none;
-    --cv-soft: #1A2140;
-    --cv-paper: #232A38;
-    --cv-ink: #D3DAF5;
-    --cv-rule: #3A466F;
-    --cv-neutral: #1A1F25;
-    --cv-side: #20262E;
-    --cv-rose: #2A1E1D;
-    --heart: #F07A62;
-    --space: #0A0D12;
-    --space-orbit: #263049;
+    --cover-bg: #26221C;
+    --frame-line: rgba(255, 255, 255, .08);
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0E1114;
-  --surface: #151A1F;
-  --fg: #E6E9ED;
-  --muted: #98A2AD;
-  --line: #262C33;
-  --accent: #8DA2FF;
-  --accent-soft: #1D2544;
-  --on-accent: #0E1114;
-  --live: #4CC38A;
-  --amber: #EBB04F;
-  --band: #1E2D7A;
-  --band-fg: #FFFFFF;
-  --band-muted: #B8C4F5;
+  --bg: #14120F;
+  --surface: #1C1915;
+  --fg: #ECE6DA;
+  --muted: #A39B8D;
+  --line: #2F2A23;
+  --accent: #93C2A4;
+  --accent-soft: #233229;
+  --on-accent: #14120F;
+  --live: #7DB892;
+  --band: #221E19;
+  --band-fg: #ECE6DA;
+  --band-muted: #A39B8D;
   --shadow: none;
-  --cv-soft: #1A2140;
-  --cv-paper: #232A38;
-  --cv-ink: #D3DAF5;
-  --cv-rule: #3A466F;
-  --cv-neutral: #1A1F25;
-  --cv-side: #20262E;
-  --cv-rose: #2A1E1D;
-  --heart: #F07A62;
-  --space: #0A0D12;
-  --space-orbit: #263049;
+  --cover-bg: #26221C;
+  --frame-line: rgba(255, 255, 255, .08);
   color-scheme: dark;
 }
 
@@ -327,7 +299,6 @@ h3 {
   height: .5rem;
   border-radius: 50%;
   background: var(--live);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--live) 22%, transparent);
 }
 
 .name {
@@ -475,12 +446,55 @@ h3 {
 .job-body li::marker { color: var(--accent); }
 
 /* ---------- Projects ---------- */
-.cover { position: relative; aspect-ratio: 16 / 10; max-width: 100%; overflow: hidden; }
-.cover svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
-.bg-soft { background: var(--cv-soft); }
-.bg-space { background: var(--space); }
-.bg-neutral { background: var(--cv-neutral); }
-.bg-rose { background: var(--cv-rose); }
+/* Each cover is a screenshot set on a mat, cropped at the bottom edge. */
+.cover {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  max-width: 100%;
+  overflow: hidden;
+  background: var(--cover-bg);
+}
+.shot {
+  position: absolute;
+  inset: 7% 7% 0;
+  display: block;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid var(--frame-line);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 14px 34px -18px rgba(31, 28, 23, .5);
+  transition: transform .25s ease;
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+/* Charts are shown whole instead of cropped. */
+.shot.fit img { object-fit: contain; padding: 5% 5% 0; }
+a.cover:hover .shot { transform: translateY(-4px); }
+a.cover:focus-visible { outline-offset: -3px; border-radius: 0; }
+
+/* Shown until a real screenshot is added. */
+.shot.empty {
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border-style: dashed;
+  border-color: var(--line);
+  box-shadow: none;
+}
+.shot.empty span {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 
 .featured {
   display: grid;
@@ -543,44 +557,6 @@ h3 {
 @media (min-width: 1020px) {
   .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-
-/* ---------- Cover art (inline SVG) ---------- */
-.cv-soft { fill: var(--cv-soft); }
-.cv-paper { fill: var(--cv-paper); }
-.cv-ink { fill: var(--cv-ink); }
-.cv-rule { fill: var(--cv-rule); }
-.cv-faint { fill: var(--cv-ink); opacity: .22; }
-.cv-hl { fill: var(--accent); opacity: .14; }
-.cv-accent { fill: var(--accent); }
-.cv-accent2 { fill: var(--accent); opacity: .6; }
-.cv-accent3 { fill: var(--accent); opacity: .32; }
-.cv-onaccent { fill: var(--on-accent); }
-.cv-neutral { fill: var(--cv-neutral); }
-.cv-side { fill: var(--cv-side); }
-.cv-rose { fill: var(--cv-rose); }
-.cv-live { fill: var(--live); }
-.cv-amber { fill: var(--amber); }
-.cv-heart { fill: var(--heart); }
-.cv-link { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 4 4; }
-.cv-ecg { fill: none; stroke: var(--heart); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
-.cv-ecg-grid { fill: none; stroke: var(--cv-rule); stroke-width: .75; opacity: .7; }
-.cv-ring { fill: var(--cv-paper); stroke: var(--heart); stroke-width: 2.5; }
-.cv-text { fill: var(--cv-ink); font-family: var(--font-mono); font-size: 10px; }
-.cv-text-dim { fill: var(--cv-ink); opacity: .6; font-family: var(--font-mono); font-size: 9px; }
-.cv-label { fill: var(--cv-ink); font-family: var(--font-body); font-size: 11px; font-weight: 600; }
-.cv-chiptext { fill: var(--on-accent); font-family: var(--font-mono); font-size: 8px; font-weight: 500; }
-
-/* The AsteRisk cover is dark in both themes, so its colours are fixed. */
-.sp-bg { fill: var(--space); }
-.sp-star { fill: var(--space-text); opacity: .7; }
-.sp-orbit { fill: none; stroke: var(--space-orbit); stroke-width: 1.25; }
-.sp-dot { fill: var(--space-dot); }
-.sp-earth { fill: #4C6BFF; }
-.sp-flag { fill: #EBB04F; }
-.sp-flag-ring { fill: none; stroke: #EBB04F; stroke-width: 1.25; stroke-dasharray: 3 3; }
-.sp-bar { fill: var(--space-dot); opacity: .75; }
-.sp-text { fill: var(--space-text); font-family: var(--font-mono); font-size: 10px; }
-.sp-flag-text { fill: #EBB04F; font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; }
 
 /* ---------- Toolkit ---------- */
 .toolkit { display: grid; gap: 1rem; }
@@ -722,7 +698,7 @@ h3 {
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn, .icon-btn, .card, .nav, .reveal-ready [data-reveal] { transition: none; }
-  .card:hover { transform: none; }
+  .btn, .icon-btn, .card, .nav, .shot, .reveal-ready [data-reveal] { transition: none; }
+  .card:hover, a.cover:hover .shot { transform: none; }
   .reveal-ready [data-reveal]:not(.is-visible) { opacity: 1; transform: none; }
 }
