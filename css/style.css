@@ -442,7 +442,8 @@ h3 {
 
 .job-body { min-width: 0; }
 .job-role { font-weight: 600; font-size: 1.05rem; margin: 0 0 .7rem; }
-.job-body ul { margin: 0; padding-left: 1.15rem; display: grid; gap: .5rem; max-width: 46rem; }
+/* Bullet list only; the tag list below it keeps its own row layout. */
+.job-body ul:not(.tags) { margin: 0; padding-left: 1.15rem; display: grid; gap: .5rem; max-width: 46rem; }
 .job-body li::marker { color: var(--accent); }
 
 /* ---------- Projects ---------- */
